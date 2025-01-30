@@ -1,0 +1,4 @@
+aiogram==2.25.1
+sqlalchemy==1.4.41
+python-dotenv==0.21.0  # Для загрузки переменных окружения
+psycopg2-binary==2.9.7
