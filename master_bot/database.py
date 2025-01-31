@@ -14,7 +14,7 @@ class User(Base):
 
 class WorkerBotDB(Base):  # Переименован для избежания конфликта
     __tablename__ = 'bots'
-    bot_id = Column(Integer, primary_key=True)
+    bot_id = Column(Integer, primary_key=True, autoincrement=True)
     owner_id = Column(BigInteger, ForeignKey('users.user_id'))
     token = Column(String(255), unique=True)
     bot_username = Column(String(255))

@@ -59,3 +59,9 @@ class WorkerBotInstance:
             await self.dp.start_polling()
         finally:
             await self.dp.storage.close()
+
+    async def stop(self):
+        await self.dp.storage.close()
+        await self.bot.close()
+        await self.master_bot.close()
+        
